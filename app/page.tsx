@@ -950,7 +950,7 @@ const projects = [
     description:
       "Bloomberg-style EUR/JPY dashboard: live rate, SMA/RSI/Bollinger Band overlays, 1,000-path Monte Carlo simulation with t-distribution, macro event radar, personal trade log with auto-resolution, and conversion calculator.",
     tags: ["React", "Vite", "Recharts", "Tailwind", "Frankfurter API"],
-    link: "https://agagniare.github.io/eurjpy-monitor/",
+    link: "https://agagniare.github.io/EUR-JPY-Monitor/",
     linkLabel: "Live app ↗",
   },
   {
