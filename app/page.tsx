@@ -805,12 +805,12 @@ function ExperienceRow({
 }
 
 const INSTRUMENTS = [
-  { symbol: "SPX",    name: "S&P 500",       base: 5420.50, vol: 12,     dec: 2 },
-  { symbol: "NKY",    name: "Nikkei 225",    base: 38450.0, vol: 120,    dec: 0 },
-  { symbol: "EURJPY", name: "EUR / JPY",     base: 163.85,  vol: 0.28,   dec: 2 },
-  { symbol: "VIX",    name: "Volatility",    base: 17.30,   vol: 0.22,   dec: 2 },
-  { symbol: "EURUSD", name: "EUR / USD",     base: 1.0832,  vol: 0.0007, dec: 4 },
-  { symbol: "DXY",    name: "Dollar Index",  base: 104.45,  vol: 0.16,   dec: 2 },
+  { symbol: "SPX",    name: "S&P 500",      base: 5420.50, vol: 12,     dec: 2,    live: false },
+  { symbol: "NKY",    name: "Nikkei 225",   base: 38450.0, vol: 120,    dec: 0,    live: false },
+  { symbol: "EURJPY", name: "EUR / JPY",    base: 163.85,  vol: 0.28,   dec: 2,    live: true  },
+  { symbol: "VIX",    name: "Volatility",   base: 17.30,   vol: 0.22,   dec: 2,    live: false },
+  { symbol: "EURUSD", name: "EUR / USD",    base: 1.0832,  vol: 0.0007, dec: 4,    live: true  },
+  { symbol: "DXY",    name: "Dollar Index", base: 104.45,  vol: 0.16,   dec: 2,    live: false },
 ];
 const HIST = 24;
 
@@ -819,6 +819,28 @@ function MarketDataPanel() {
     INSTRUMENTS.map((i) => ({ ...i, price: i.base, history: Array(HIST).fill(i.base) }))
   );
   const [blink, setBlink] = useState(true);
+
+  // Fetch live forex rates (EUR base) from frankfurter.app on mount
+  useEffect(() => {
+    fetch("https://api.frankfurter.app/latest?from=EUR&to=JPY,USD")
+      .then((r) => r.json())
+      .then((data) => {
+        const jpy = data?.rates?.JPY;
+        const usd = data?.rates?.USD;
+        setRows((prev) =>
+          prev.map((r) => {
+            if (r.symbol === "EURJPY" && jpy) {
+              return { ...r, base: jpy, price: jpy, history: Array(HIST).fill(jpy) };
+            }
+            if (r.symbol === "EURUSD" && usd) {
+              return { ...r, base: usd, price: usd, history: Array(HIST).fill(usd) };
+            }
+            return r;
+          })
+        );
+      })
+      .catch(() => { /* silently keep defaults on network error */ });
+  }, []);
 
   useEffect(() => {
     const price = setInterval(() => {
@@ -857,7 +879,7 @@ function MarketDataPanel() {
             Market Data
           </span>
         </div>
-        <span style={{ fontSize: 9, color: T.body, letterSpacing: "0.06em" }}>SIMULATED · LIVE</span>
+        <span style={{ fontSize: 9, color: T.body, letterSpacing: "0.06em" }}>ECB RATES · SIMULATED</span>
       </div>
 
       {/* Rows */}
@@ -903,7 +925,7 @@ function MarketDataPanel() {
 
       <div style={{ padding: "6px 16px", textAlign: "right" }}>
         <span style={{ fontSize: 8, color: "#3a4058", letterSpacing: "0.04em" }}>
-          Prices are simulated for illustration
+          Forex: ECB via frankfurter.app · Indices: simulated
         </span>
       </div>
     </div>
