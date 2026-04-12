@@ -807,7 +807,7 @@ function ExperienceRow({
 const INSTRUMENTS = [
   { symbol: "SPX",    name: "S&P 500",      base: 5420.50, vol: 12,     dec: 2,    live: false },
   { symbol: "NKY",    name: "Nikkei 225",   base: 38450.0, vol: 120,    dec: 0,    live: false },
-  { symbol: "EURJPY", name: "EUR / JPY",    base: 163.85,  vol: 0.28,   dec: 2,    live: true  },
+  { symbol: "EURJPY", name: "EUR / JPY",    base: 186.80,  vol: 0.32,   dec: 2,    live: true  },
   { symbol: "VIX",    name: "Volatility",   base: 17.30,   vol: 0.22,   dec: 2,    live: false },
   { symbol: "EURUSD", name: "EUR / USD",    base: 1.0832,  vol: 0.0007, dec: 4,    live: true  },
   { symbol: "DXY",    name: "Dollar Index", base: 104.45,  vol: 0.16,   dec: 2,    live: false },
@@ -820,9 +820,9 @@ function MarketDataPanel() {
   );
   const [blink, setBlink] = useState(true);
 
-  // Fetch live forex rates (EUR base) from frankfurter.app on mount
+  // Fetch live forex rates (EUR base) from open.er-api.com on mount
   useEffect(() => {
-    fetch("https://api.frankfurter.app/latest?from=EUR&to=JPY,USD")
+    fetch("https://open.er-api.com/v6/latest/EUR")
       .then((r) => r.json())
       .then((data) => {
         const jpy = data?.rates?.JPY;
@@ -925,7 +925,7 @@ function MarketDataPanel() {
 
       <div style={{ padding: "6px 16px", textAlign: "right" }}>
         <span style={{ fontSize: 8, color: "#3a4058", letterSpacing: "0.04em" }}>
-          Forex: ECB via frankfurter.app · Indices: simulated
+          Forex: open.er-api.com · Indices: simulated
         </span>
       </div>
     </div>
