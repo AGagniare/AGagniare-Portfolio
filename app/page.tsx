@@ -514,7 +514,7 @@ export default function Home() {
             Send an email
           </a>
           <a
-            href="https://linkedin.com/in/arthur-gagniare"
+            href="https://www.linkedin.com/in/arthur-gagniare-6799761b6/"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -595,12 +595,14 @@ function ProjectCard({
   tags,
   highlight,
   link,
+  linkLabel = "Live demo ↗",
 }: {
   title: string;
   description: string;
   tags: string[];
   highlight?: string;
   link?: string;
+  linkLabel?: string;
 }) {
   return (
     <div
@@ -696,7 +698,7 @@ function ProjectCard({
               e.currentTarget.style.borderColor = T.border;
             }}
           >
-            Live demo ↗
+            {linkLabel}
           </a>
         )}
       </div>
@@ -799,6 +801,8 @@ const projects = [
     description:
       "Python backtesting engine for equity momentum strategies on S&P 500 constituents. Implements monthly rebalancing, transaction cost modeling, and full performance attribution — Sharpe, Sortino, max drawdown, and rolling beta vs. benchmark.",
     tags: ["Python", "pandas", "NumPy", "matplotlib", "yfinance"],
+    link: "https://github.com/AGagniare/momentum-backtester",
+    linkLabel: "GitHub ↗",
   },
   {
     title: "Credit Default Prediction Model",
