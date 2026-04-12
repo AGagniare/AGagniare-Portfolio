@@ -284,7 +284,7 @@ export default function Home() {
               Previously at BNP Paribas in Paris, I built financial data
               pipelines and dashboards covering Asian &amp; Chinese markets.
               That background lets me bridge business needs and technical
-              solutions — particularly in data-driven, cross-cultural
+              solutions particularly in data-driven, cross-cultural
               environments like Tokyo&apos;s tech ecosystem.
             </p>
           </div>
@@ -325,10 +325,10 @@ export default function Home() {
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
               {[
-                "French — Native",
-                "English — C1 (935 TOEIC)",
-                "Polish — Proficient",
-                "Japanese — Beginner",
+                "French · Native",
+                "English · C1 (935 TOEIC)",
+                "Polish · Proficient",
+                "Japanese · Beginner",
               ].map((lang) => (
                 <span
                   key={lang}
@@ -406,7 +406,7 @@ export default function Home() {
           <div style={{ marginTop: 24, display: "flex", flexDirection: "column", gap: 28 }}>
             {[
               {
-                period: "Apr 2026 — Present",
+                period: "Apr 2026 - Present",
                 school: "ISI Language School",
                 location: "Tokyo, Japan",
                 degree: "Japanese Language & Business",
@@ -414,7 +414,7 @@ export default function Home() {
                   "Intensive Japanese language program with a focus on business communication and cross-cultural professional practice.",
               },
               {
-                period: "2020 — 2025",
+                period: "2020 - 2025",
                 school: "EFREI Paris",
                 location: "France",
                 degree: "Master's in Computer Engineering",
@@ -562,7 +562,7 @@ export default function Home() {
         }}
       >
         <p style={{ fontSize: 12, color: T.body }}>
-          © {new Date().getFullYear()} Arthur Gagniare — Paris / Tokyo
+          © {new Date().getFullYear()} Arthur Gagniare · Paris / Tokyo
         </p>
       </footer>
     </div>
@@ -939,7 +939,7 @@ const projects = [
     title: "Cross-Sectional Momentum Backtester",
     highlight: "Quant",
     description:
-      "Python backtesting engine for equity momentum strategies on S&P 500 constituents. Implements monthly rebalancing, transaction cost modeling, and full performance attribution — Sharpe, Sortino, max drawdown, and rolling beta vs. benchmark.",
+      "Python backtesting engine for equity momentum strategies on S&P 500 constituents. Implements monthly rebalancing, transaction cost modeling, and full performance attribution, Sharpe, Sortino, max drawdown, and rolling beta vs. benchmark.",
     tags: ["Python", "pandas", "NumPy", "matplotlib", "yfinance"],
     link: "https://github.com/AGagniare/momentum-backtester",
     linkLabel: "GitHub ↗",
@@ -965,7 +965,7 @@ const projects = [
     title: "Multilingual VoC NLP Pipeline",
     highlight: "Real work · Kenja K.K.",
     description:
-      "Production NLP pipeline to detect and classify misrouted customer calls from 5,000+ monthly transcripts in French, English, and Japanese. Rule-based routing logic with zero LLM dependency — fully auditable and traceable for compliance.",
+      "Production NLP pipeline to detect and classify misrouted customer calls from 5,000+ monthly transcripts in French, English, and Japanese. Rule-based routing logic with zero LLM dependency fully auditable and traceable for compliance.",
     tags: ["Python", "NLP", "spaCy", "pandas", "API Integration"],
   },
 ];
@@ -974,7 +974,7 @@ const experience = [
   {
     role: "Data Analyst Intern",
     company: "BNP Paribas",
-    period: "2023 — 2024",
+    period: "2023   2024",
     location: "Paris, France",
     bullets: [
       "Designed and managed complete SQL database architectures, optimizing data integration and cleansing for business operations across Asian and Chinese financial markets.",

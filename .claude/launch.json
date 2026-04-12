@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000
+    },
+    {
+      "name": "Streamlit Credit Risk App",
+      "runtimeExecutable": "/Users/arthur/credit-risk-model/.venv/bin/streamlit",
+      "runtimeArgs": ["run", "/Users/arthur/credit-risk-model/app.py", "--server.port=8501", "--server.headless=true"],
+      "port": 8501
     }
   ]
 }
