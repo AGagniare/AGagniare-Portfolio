@@ -108,111 +108,121 @@ export default function Home() {
       <section
         style={{ maxWidth: 1080, margin: "0 auto", padding: "96px 24px 80px" }}
       >
-        <div
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 8,
-            marginBottom: 24,
-            fontSize: 11,
-            fontWeight: 400,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: T.purple,
-          }}
-        >
-          <span
-            style={{
-              width: 6,
-              height: 6,
-              borderRadius: "50%",
-              background: T.success,
-              boxShadow: `0 0 6px ${T.success}`,
-              display: "inline-block",
-            }}
-          />
-          Open to full-time opportunities
-        </div>
+        <div style={{ display: "flex", gap: 48, alignItems: "center", flexWrap: "wrap" }}>
+          {/* Left: text */}
+          <div style={{ flex: "1 1 320px" }}>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                marginBottom: 24,
+                fontSize: 11,
+                fontWeight: 400,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: T.purple,
+              }}
+            >
+              <span
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: "50%",
+                  background: T.success,
+                  boxShadow: `0 0 6px ${T.success}`,
+                  display: "inline-block",
+                }}
+              />
+              Open to full-time opportunities
+            </div>
 
-        <h1
-          style={{
-            fontFamily: HEADING_FONT,
-            fontSize: "clamp(2rem, 5vw, 3.2rem)",
-            fontWeight: 400,
-            letterSpacing: "0.05em",
-            color: T.heading,
-            lineHeight: 1.1,
-            marginBottom: 24,
-            maxWidth: 640,
-          }}
-        >
-          Data Analyst
-          <br />
-          <span style={{ color: T.purple }}>&amp; Engineer</span>
-        </h1>
+            <h1
+              style={{
+                fontFamily: HEADING_FONT,
+                fontSize: "clamp(2rem, 5vw, 3.2rem)",
+                fontWeight: 400,
+                letterSpacing: "0.05em",
+                color: T.heading,
+                lineHeight: 1.1,
+                marginBottom: 24,
+                maxWidth: 640,
+              }}
+            >
+              Data Analyst
+              <br />
+              <span style={{ color: T.purple }}>&amp; Engineer</span>
+            </h1>
 
-        <p
-          style={{
-            fontSize: 17,
-            fontWeight: 300,
-            color: T.body,
-            lineHeight: 1.7,
-            maxWidth: 500,
-            marginBottom: 40,
-          }}
-        >
-          Master&apos;s student at EFREI Paris, specializing in Data Analysis.
-          Background in financial data systems at BNP Paribas and NLP/ops
-          engineering in Tokyo. Seeking a junior role at the intersection of
-          data and quantitative analysis.
-        </p>
+            <p
+              style={{
+                fontSize: 17,
+                fontWeight: 300,
+                color: T.body,
+                lineHeight: 1.7,
+                maxWidth: 500,
+                marginBottom: 40,
+              }}
+            >
+              Master&apos;s student at EFREI Paris, specializing in Data Analysis.
+              Background in financial data systems at BNP Paribas and NLP/ops
+              engineering in Tokyo. Seeking a junior role at the intersection of
+              data and quantitative analysis.
+            </p>
 
-        <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-          <a
-            href="#projects"
-            style={{
-              background: T.purple,
-              color: "#fff",
-              padding: "10px 20px",
-              borderRadius: 4,
-              fontSize: 14,
-              fontWeight: 400,
-              textDecoration: "none",
-              transition: "background 0.15s",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.background = T.purpleHover)
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.background = T.purple)
-            }
-          >
-            View projects
-          </a>
-          <a
-            href="mailto:arthur.gagniare@efrei.net"
-            style={{
-              background: "transparent",
-              color: T.label,
-              padding: "10px 20px",
-              borderRadius: 4,
-              fontSize: 14,
-              fontWeight: 400,
-              textDecoration: "none",
-              border: `1px solid ${T.border}`,
-              transition: "border-color 0.15s, color 0.15s",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)";
-              e.currentTarget.style.color = T.heading;
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = T.border;
-              e.currentTarget.style.color = T.label;
-            }}
-          >
-            arthur.gagniare@efrei.net
-          </a>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <a
+                href="#projects"
+                style={{
+                  background: T.purple,
+                  color: "#fff",
+                  padding: "10px 20px",
+                  borderRadius: 4,
+                  fontSize: 14,
+                  fontWeight: 400,
+                  textDecoration: "none",
+                  transition: "background 0.15s",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.background = T.purpleHover)
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.background = T.purple)
+                }
+              >
+                View projects
+              </a>
+              <a
+                href="mailto:arthur.gagniare@efrei.net"
+                style={{
+                  background: "transparent",
+                  color: T.label,
+                  padding: "10px 20px",
+                  borderRadius: 4,
+                  fontSize: 14,
+                  fontWeight: 400,
+                  textDecoration: "none",
+                  border: `1px solid ${T.border}`,
+                  transition: "border-color 0.15s, color 0.15s",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)";
+                  e.currentTarget.style.color = T.heading;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = T.border;
+                  e.currentTarget.style.color = T.label;
+                }}
+              >
+                arthur.gagniare@efrei.net
+              </a>
+            </div>
+          </div>
+
+          {/* Right: animated equity curve */}
+          <div style={{ flex: "1 1 320px" }}>
+            <EquityCurveAnimation />
+          </div>
         </div>
       </section>
 
@@ -788,6 +798,91 @@ function ExperienceRow({
           ))}
         </ul>
       </div>
+    </div>
+  );
+}
+
+function EquityCurveAnimation() {
+  const strategyPoints =
+    "10,178 40,170 70,162 100,153 125,158 145,142 170,128 195,112 215,120 235,95 260,75 280,55 298,68 318,45 342,30 368,18 388,12";
+  const benchmarkPoints =
+    "10,178 50,170 90,163 130,156 155,165 180,150 210,140 240,130 265,138 285,122 310,112 335,102 360,93 388,83";
+
+  return (
+    <div style={{ width: "100%", maxWidth: 460 }}>
+      <style>{`
+        @keyframes eq-draw {
+          from { stroke-dashoffset: 1600; }
+          to   { stroke-dashoffset: 0; }
+        }
+        @keyframes eq-fade {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
+      `}</style>
+      <svg viewBox="0 0 400 215" width="100%" style={{ display: "block" }}>
+        {/* Background */}
+        <rect width="400" height="215" rx="8" fill="#13151c" />
+        <rect width="400" height="215" rx="8" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+
+        {/* Grid */}
+        {[50, 100, 150].map((y) => (
+          <line key={y} x1="10" y1={y} x2="390" y2={y} stroke="rgba(255,255,255,0.04)" strokeWidth="1" />
+        ))}
+        {[100, 200, 300].map((x) => (
+          <line key={x} x1={x} y1="10" x2={x} y2="190" stroke="rgba(255,255,255,0.04)" strokeWidth="1" />
+        ))}
+
+        {/* Fill areas — fade in after lines finish */}
+        <polyline
+          points={`${benchmarkPoints} 388,195 10,195`}
+          fill="rgba(74,80,104,0.06)" stroke="none"
+          style={{ opacity: 0, animation: "eq-fade 0.6s ease-out 2.6s forwards" }}
+        />
+        <polyline
+          points={`${strategyPoints} 388,195 10,195`}
+          fill="rgba(108,86,255,0.08)" stroke="none"
+          style={{ opacity: 0, animation: "eq-fade 0.6s ease-out 2.6s forwards" }}
+        />
+
+        {/* Benchmark line (fade in, grey) */}
+        <polyline
+          points={benchmarkPoints}
+          fill="none" stroke="#4a5068" strokeWidth="1.5"
+          style={{ opacity: 0, animation: "eq-fade 1.8s ease-out 0.5s forwards" }}
+        />
+
+        {/* Strategy line (draw animation, purple) */}
+        <polyline
+          points={strategyPoints}
+          fill="none" stroke="#6c56ff" strokeWidth="2"
+          style={{
+            strokeDasharray: "1600 1600",
+            strokeDashoffset: 1600,
+            animation: "eq-draw 2.2s ease-out 0.2s forwards",
+          }}
+        />
+
+        {/* End dots */}
+        <circle cx="388" cy="12" r="3.5" fill="#6c56ff"
+          style={{ opacity: 0, animation: "eq-fade 0.3s ease-out 2.4s forwards" }} />
+        <circle cx="388" cy="83" r="3" fill="#4a5068"
+          style={{ opacity: 0, animation: "eq-fade 0.3s ease-out 2.6s forwards" }} />
+
+        {/* Legend */}
+        <g style={{ opacity: 0, animation: "eq-fade 0.5s ease-out 2.5s forwards" }}>
+          <rect x="14" y="13" width="10" height="2" rx="1" fill="#6c56ff" />
+          <text x="28" y="17" fill="#7d8799" fontSize="9" fontFamily="monospace">Strategy</text>
+          <line x1="14" y1="26" x2="24" y2="26" stroke="#4a5068" strokeWidth="1.5" strokeDasharray="3,2" />
+          <text x="28" y="30" fill="#4a5068" fontSize="9" fontFamily="monospace">SPY</text>
+        </g>
+
+        {/* Year labels */}
+        <g style={{ opacity: 0, animation: "eq-fade 0.5s ease-out 2.5s forwards" }}>
+          <text x="10" y="208" fill="#3a4058" fontSize="8" fontFamily="monospace">2010</text>
+          <text x="356" y="208" fill="#3a4058" fontSize="8" fontFamily="monospace">2026</text>
+        </g>
+      </svg>
     </div>
   );
 }
