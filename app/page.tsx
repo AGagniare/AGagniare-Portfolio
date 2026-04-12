@@ -807,7 +807,7 @@ function ExperienceRow({
 const INSTRUMENTS = [
   { symbol: "SPX",    name: "S&P 500",       base: 5420.50, vol: 12,     dec: 2 },
   { symbol: "NKY",    name: "Nikkei 225",    base: 38450.0, vol: 120,    dec: 0 },
-  { symbol: "USDJPY", name: "USD / JPY",     base: 153.42,  vol: 0.22,   dec: 2 },
+  { symbol: "EURJPY", name: "EUR / JPY",     base: 163.85,  vol: 0.28,   dec: 2 },
   { symbol: "VIX",    name: "Volatility",    base: 17.30,   vol: 0.22,   dec: 2 },
   { symbol: "EURUSD", name: "EUR / USD",     base: 1.0832,  vol: 0.0007, dec: 4 },
   { symbol: "DXY",    name: "Dollar Index",  base: 104.45,  vol: 0.16,   dec: 2 },
