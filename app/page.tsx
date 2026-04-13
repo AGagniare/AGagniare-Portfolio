@@ -954,6 +954,15 @@ const projects = [
     linkLabel: "Live app ↗",
   },
   {
+    title: "Risk & Performance Tearsheet CLI",
+    highlight: "Quant · Risk",
+    description:
+      "Installable Python CLI that accepts any equity-curve CSV and produces a Rich terminal risk summary plus a 5-panel matplotlib PDF tearsheet. Computes CAGR, Sharpe, Sortino, Calmar, historical and parametric VaR (95/99), CVaR, max drawdown, skewness and kurtosis, plus alpha, beta, information ratio and up/down capture vs. any yfinance benchmark.",
+    tags: ["Python", "click", "Rich", "matplotlib", "pandas", "scipy", "yfinance"],
+    link: "https://github.com/AGagniare/risk-tearsheet",
+    linkLabel: "GitHub ↗",
+  },
+  {
     title: "Credit Default Prediction Model",
     highlight: "ML · Finance",
     description:
