@@ -959,8 +959,8 @@ const projects = [
     description:
       "Interactive Streamlit dashboard analysing Japan's labour market using official e-Stat government data. Tracks the job-to-applicant ratio (有効求人倍率) from 2015 to present, industry breakdown, Tokyo vs national comparison, unemployment trends vs OECD average, and data analyst salary outlook in Tokyo.",
     tags: ["Python", "Streamlit", "Plotly", "pandas", "e-Stat API"],
-    link: "https://github.com/AGagniare/japan-labour-dashboard",
-    linkLabel: "GitHub ↗",
+    link: "https://japan-labour-dashboard-jpprzwyhod9kbzzqixyaua.streamlit.app/",
+    linkLabel: "Live app ↗",
   },
   {
     title: "Risk & Performance Tearsheet CLI",
