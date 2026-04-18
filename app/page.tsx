@@ -957,7 +957,7 @@ const projects = [
     title: "FinLens — Financial Report Analyst",
     highlight: "LLM · Finance",
     description:
-      "Gradio app that analyses financial PDFs (Japanese 決算短信 and English 10-K) using Google Gemini 1.5 Flash. Auto-detects document language and responds in kind. Two modes: structured five-section summary and grounded multi-turn Q&A that won't hallucinate outside the document.",
+      "Gradio app that analyses financial PDFs (Japanese 決算短信 and English 10-K) using Google Gemini. Auto-detects document language and responds in kind. Three modes: structured summary, grounded multi-turn Q&A, and competitor comparison — upload two reports to get a financial snapshot table, narrative analysis, and verdict.",
     tags: ["Python", "Gradio", "Google Gemini", "LLM", "Finance"],
     link: "https://huggingface.co/spaces/AGagniare/Finlens",
     linkLabel: "Live app ↗",
